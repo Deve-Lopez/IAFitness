@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IAFitness.Views.LoginPage"
+             Title="LoginPage"
+             Shell.NavBarIsVisible="False">
+
+    <Grid RowDefinitions="*,*,*">
+
+        <Image Source="fondoiafitness3.jpeg" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Aspect="AspectFill"
+               ZIndex="0" Grid.RowSpan="3"/>
+        <Label Text="IA" Grid.RowSpan="2" VerticalOptions="Center" HorizontalOptions="Center" FontSize="180"
+       TextColor="Yellow" TranslationY="90" FontFamily="Jumpshot">
+            <Label.Shadow>
+                <Shadow Brush="{StaticResource GrisIconos}" Offset="5,5" Radius="5"/>
+            </Label.Shadow>
+        </Label>
+        <Label Text="Fitness" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" FontSize="75"
+               TextColor="White" FontFamily="Jumpshot" TranslationY="50">
+            <Label.Shadow>
+                <Shadow Brush="{StaticResource GrisIconos}" Offset="5,5" Radius="5"/>
+            </Label.Shadow>
+        </Label>
+        <VerticalStackLayout Grid.Row="2" Spacing="10">
+
+            <!--Entry Usuario-->
+            <Border BackgroundColor="White" HeightRequest="60" WidthRequest="350" StrokeThickness="0" Padding="10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="0.1*,0.9*">
+                    <Label Text="&#xe853;" FontFamily="MaterialIcons" TextColor="#404040" 
+                           VerticalOptions="Center" FontSize="24"/>
+                    <Entry VerticalOptions="Center" HorizontalOptions="FillAndExpand" Placeholder="Usuario"
+                           Grid.Column="1" FontFamily="OpenSansRegular" Text="{Binding Dni, Mode=TwoWay}"
+                           TextColor="#404040"/>
+                </Grid>
+            </Border>
+
+            <!--Entry Contraseña-->
+            <Border BackgroundColor="White" HeightRequest="60" WidthRequest="350" StrokeThickness="0" Padding="10">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Grid ColumnDefinitions="0.1*,0.8*,0.1*">
+                    <Label Text="&#xe897;" FontFamily="MaterialIcons" TextColor="#404040" 
+                           VerticalOptions="Center" FontSize="24"/>
+                    <Entry VerticalOptions="Center" HorizontalOptions="FillAndExpand" Placeholder="Contraseña"
+                           Grid.Column="1" FontFamily="OpenSansRegular" Text="{Binding Contrasenya, Mode=TwoWay}"
+                           TextColor="#404040" IsPassword="{Binding IsPasswordHidden}"/>
+                    <Label Text="{Binding PasswordToggleIcon}" FontFamily="MaterialIcons" TextColor="{StaticResource GrisIconos}"
+                           VerticalOptions="Center" HorizontalOptions="Center" Grid.Column="2" FontSize="24">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding TogglePasswordCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                </Grid>
+            </Border>
+
+            <!--Recordar Contraseña-->
+            <Grid ColumnDefinitions="*,*">
+                <HorizontalStackLayout Grid.Column="0" Margin="20,0,0,0" TranslationY="-10">
+                    <CheckBox Color="White" IsChecked="{Binding RecordarContrasenya, Mode=TwoWay}" />
+                    <Label Text="Recordar Contraseña" VerticalOptions="Center" FontFamily="OpenSansRegular" FontSize="15"
+                           TextColor="White"/>
+                </HorizontalStackLayout>
+            </Grid>
+
+            <!--Botón Aceptar-->
+            <Button Text="Aceptar" FontFamily="OpenSansRegular" TextColor="Black" FontAttributes="Bold" BackgroundColor="Yellow"
+                    HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" HeightRequest="50" CornerRadius="10"
+                    WidthRequest="250" Command="{Binding LoginCommand}">
+                <Button.Shadow>
+                    <Shadow Brush="#646464"
+                            Offset="5,5"
+                            Radius="5"/>
+                </Button.Shadow>
+            </Button>
+
+        </VerticalStackLayout>
+    </Grid>
+
+</ContentPage>
