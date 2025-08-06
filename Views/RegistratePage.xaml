@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="IAFitness.Views.RegistratePage"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="Black">
+    <Grid RowDefinitions="0.08*,0.6*,0.32*">
+        <Grid Grid.Row="0" ColumnDefinitions="*,*,*" BackgroundColor="{StaticResource Gray900}">
+            <!--Flecha volver atras-->
+            <Label Text="&#xe5c4;" FontFamily="MaterialIcons" VerticalOptions="Center" HorizontalOptions="Start"
+                   FontSize="28" Margin="20,0,0,0" TextColor="White" Grid.Column="0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding VolverAtrasCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+            <!--Texto regístrate-->
+            <Label Text="Regístrate" FontFamily="Roboto" VerticalOptions="Center" HorizontalOptions="Center"
+                   Grid.Column="1" FontSize="18"/>
+            <!--Icono ayuda-->
+            <Label Text="&#xe887;" FontFamily="MaterialIcons" VerticalOptions="Center" HorizontalOptions="End"
+                   Grid.Column="2" FontSize="26" Margin="0,0,20,0">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding AyudaCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
+        </Grid>
+        <VerticalStackLayout Grid.Row="1" Padding="20">
+            <Label Text="Correo electrónico" FontFamily="Roboto" VerticalOptions="Center" HorizontalOptions="Start"
+                   FontSize="18"/>
+            <Entry Text="ejemplo@gmail.com" TextColor="{StaticResource GrisIconos}" PlaceholderColor="{StaticResource GrisIconos}"
+                   FontFamily="Roboto" FontSize="16"/>
+            <Label Text="Contraseña" FontFamily="Roboto" VerticalOptions="Center" HorizontalOptions="Start"
+                   FontSize="18" Margin="0,20,0,0"/>
+            <Entry Text="mínimo 8 caracteres" TextColor="{StaticResource GrisIconos}" PlaceholderColor="{StaticResource GrisIconos}"
+                   FontFamily="Roboto" FontSize="16"/>
+            <Label Text="Usuario" FontFamily="Roboto" VerticalOptions="Center" HorizontalOptions="Start"
+                   FontSize="18" Margin="0,20,0,0"/>
+            <Entry Text="Usuario 1" TextColor="{StaticResource GrisIconos}" PlaceholderColor="{StaticResource GrisIconos}"
+                   FontFamily="Roboto" FontSize="16"/>
+        </VerticalStackLayout>
+
+        <Grid Grid.Row="2" Padding="15">
+            <Border HorizontalOptions="Fill" HeightRequest="50" StrokeThickness="0" BackgroundColor="{StaticResource GrisIconos}"
+                VerticalOptions="Start" >
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="10"/>
+                </Border.StrokeShape>
+                <Label Text="Continuar" FontFamily="Roboto" VerticalOptions="Center" HorizontalOptions="Center"
+                   TextColor="White" FontSize="16"/>
+            </Border>
+
+        </Grid>
+    </Grid>
+</ContentPage>

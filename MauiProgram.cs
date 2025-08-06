@@ -18,6 +18,7 @@ namespace IAFitness
                     fonts.AddFont("PlayfairDisplay-Italic-VariableFont_wght.ttf", "PlayfairItalic");
                     fonts.AddFont("PlayfairDisplay-VariableFont_wght.ttf", "Playfair");
                     fonts.AddFont("jumpshot.regular.ttf", "Jumpshot");
+                    fonts.AddFont("Roboto-Regular.ttf", "Roboto");
                 });
 
 #if DEBUG
