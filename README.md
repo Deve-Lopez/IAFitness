@@ -15,7 +15,9 @@ Integración con bases de datos y servicios cloud para almacenamiento seguro.
 
 Estado del proyecto
 ⚠️ Proyecto en fase inicial: actualmente se ha comenzado la estructura del proyecto y se está trabajando en el diseño del login y la arquitectura de la aplicación.
-![1000048604](https://github.com/user-attachments/assets/5a53b107-92af-4a5b![1000048605](https://github.com/user-attachments/assets/a369267f-6f6f-47b2-8e19-ab5262c3e201)
+
+![1000048604](https://github.com/user-attachments/assets/5a53b107-92af-4a5b
+![1000048605](https://github.com/user-attachments/assets/a369267f-6f6f-47b2-8e19-ab5262c3e201)
 -8646-a254e6dc1e5f)
 
 Instalación (opcional por ahora)
